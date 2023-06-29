@@ -94,27 +94,27 @@ function fromUser(queryIdx, response, params) {
   }
   return docs;
 }
-
+function verifySearchTermMatch(text) {
+  const regex = /(#loveislanduk|#loveisland|#li10|#casaamor|(?:love island uk)|(?:casa amor)|(?:love island))/i;
+  return text.match(regex) !== null;
+}
 function fromSearch(queryIdx, response, searchParams) {
   let docs = [];
   if (Array.isArray(response)) {
-    for (let itemIdx = 0; itemIdx < response.length; itemIdx++) {
-      let searchResult = response[itemIdx];
-      let did = searchResult.user.did;
-      let rkey = searchResult.tid.split("/").slice(-1)[0];
-      let timestamp = searchResult.post.createdAt;
-      let atURL = `at://${did}/app.bsky.feed.post/${rkey}`;
-      docs.push({
-        type: "search",
-        queryIdx: queryIdx,
-        timestamp: timestamp,
-        atURL: atURL,
-        itemIdx: itemIdx,
-        total: response.length,
-        count: searchParams.count,
-        offset: searchParams.offset,
-      });
-    }
+	for (let itemIdx = 0; itemIdx < response.length; itemIdx++) {
+		// Make sure the Bluesky search results do not contain any undesired results.
+		let checkResult = verifySearchTermMatch(searchResult.post.text);
+		let expected = true;
+	
+		// If it is a pure match, include it in the feed.
+		if (expected === checkResult) {
+		  let did = searchResult.user.did;
+		  let rkey = searchResult.tid.split("/").slice(-1)[0];
+		  let timestamp = searchResult.post.createdAt;
+		  let atURL = `at://${did}/app.bsky.feed.post/${rkey}`;
+		  timestampURLs.push([timestamp, atURL]);
+		}
+	  }
   }
   return docs;
 }
