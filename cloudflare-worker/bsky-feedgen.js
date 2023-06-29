@@ -102,19 +102,27 @@ function fromSearch(queryIdx, response, searchParams) {
   let docs = [];
   if (Array.isArray(response)) {
 	for (let itemIdx = 0; itemIdx < response.length; itemIdx++) {
-		// Make sure the Bluesky search results do not contain any undesired results.
-		let checkResult = verifySearchTermMatch(searchResult.post.text);
-		let expected = true;
 	
-		// If it is a pure match, include it in the feed.
-		if (expected === checkResult) {
-		  let did = searchResult.user.did;
-		  let rkey = searchResult.tid.split("/").slice(-1)[0];
-		  let timestamp = searchResult.post.createdAt;
-		  let atURL = `at://${did}/app.bsky.feed.post/${rkey}`;
-		  timestampURLs.push([timestamp, atURL]);
-		}
+	  let searchResult = response[itemIdx];
+	  let checkResult = verifySearchTermMatch(searchResult.post.text);
+	  let expected = true;
+	  if (expected === checkResult) {
+	  let did = searchResult.user.did;
+	  let rkey = searchResult.tid.split("/").slice(-1)[0];
+	  let timestamp = searchResult.post.createdAt;
+	  let atURL = `at://${did}/app.bsky.feed.post/${rkey}`;
+	  docs.push({
+		type: "search",
+		queryIdx: queryIdx,
+		timestamp: timestamp,
+		atURL: atURL,
+		itemIdx: itemIdx,
+		total: response.length,
+		count: searchParams.count,
+		offset: searchParams.offset,
+	  });
 	  }
+	}
   }
   return docs;
 }
