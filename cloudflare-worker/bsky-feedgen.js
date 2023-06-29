@@ -94,6 +94,7 @@ function fromUser(queryIdx, response, params) {
   }
   return docs;
 }
+// Specify the exact keywords. Used Regex /i for case-insensitivity
 function verifySearchTermMatch(text) {
   const regex = /(#loveislanduk|#loveisland|#li10|#casaamor|(?:love island uk)|(?:casa amor)|(?:love island))/i;
   return text.match(regex) !== null;
@@ -102,10 +103,11 @@ function fromSearch(queryIdx, response, searchParams) {
   let docs = [];
   if (Array.isArray(response)) {
 	for (let itemIdx = 0; itemIdx < response.length; itemIdx++) {
-	
 	  let searchResult = response[itemIdx];
+	// Make sure the Bluesky search results do not contain any undesired results
 	  let checkResult = verifySearchTermMatch(searchResult.post.text);
 	  let expected = true;
+	 // If it is a pure match, include it in the feed
 	  if (expected === checkResult) {
 	  let did = searchResult.user.did;
 	  let rkey = searchResult.tid.split("/").slice(-1)[0];
