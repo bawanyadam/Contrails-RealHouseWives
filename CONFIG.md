@@ -15,7 +15,7 @@ Love Island 🏝️
 
 > This is the description of the feed.
 
-Can I Pull You For a Chat? Tag #li10 for the shortest way to show up here. Weekly discussion by https://bsky.app/profile/leigh-chantelle.bsky.social
+Can I Pull You For a Chat? Tag #li10 for the shortest way to show up here. Weekly discussion by @leigh-chantelle.bsky.social 💋
 
 # searchTerms
 
