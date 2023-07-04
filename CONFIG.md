@@ -15,7 +15,7 @@ Love Island 🏝️
 
 > This is the description of the feed.
 
-Tag #li10 for the shortest way to show up here. Good banter only 💋
+Can I Pull You For a Chat? Tag #li10 for the shortest way to show up here. Weekly discussion by @leigh-chantelle.bsky.social
 
 # searchTerms
 
