@@ -96,7 +96,7 @@ function fromUser(queryIdx, response, params) {
 }
 // Specify the exact keywords. Used Regex /i for case-insensitivity
 function verifySearchTermMatch(text) {
-  const regex = /(#loveislanduk|#loveisland|#li10|#casaamor|(?:love island uk)|(?:casa amor)|(?:love island))/i;
+  const regex = /(#loveislanduk|#loveisland|#loveislandusa|#casaamor|(?:love island uk)|(?:casa amor)|(?:love island))/i;
   return text.match(regex) !== null;
 }
 function fromSearch(queryIdx, response, searchParams) {
