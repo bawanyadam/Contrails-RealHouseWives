@@ -39,7 +39,7 @@ Can I Pull You For a Chat? All things #loveisland. Weekly discussion by @leigh-c
 >
 > Set to `false` if you have higher limits via a paid Cloudflare plan.
 
-true
+false
 
 # avatar
 
