@@ -32,6 +32,7 @@ Can I Pull You For a Chat? All things #loveisland. Weekly discussion by @leigh-c
 - "love island"
 - "love island uk"
 - "casa amor"
+- "bergie"
 
 # safeMode
 
