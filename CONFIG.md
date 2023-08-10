@@ -15,7 +15,9 @@ Love Island 🏝️
 
 > This is the description of the feed.
 
-Can I Pull You For a Chat? All things #loveisland! Weekly discussion by @leigh-chantelle. Pin this feed to stay up-to-date! 
+Can I Pull You For a Chat? All things #loveisland! Weekly discussion by @leigh-chantelle. Pin this feed to stay up-to-date!
+
+Ping @agb.bsky.social for feed & filter updates.
 
 # searchTerms
 
