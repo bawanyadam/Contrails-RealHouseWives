@@ -3,7 +3,7 @@
 
 > This is the feed's ID which can be letters, numbers, or dashes. Spaces are not allowed. Maximum length is 15 characters.
 
-love-island-uk
+bsky-rhox
 
 # displayName
 
@@ -15,7 +15,7 @@ Love Island 🏝️
 
 > This is the description of the feed.
 
-Can I Pull You For a Chat? All things #loveisland! Weekly discussion by @leigh-chantelle. Pin this feed to stay up-to-date! Ping @agb.bsky.social for feed & filter updates.
+Indulge in the drama, glamour & chaos of Bravo's Real Housewives world! 🍸✨ Stay updated with juicy gossip, fierce confrontations, and opulent lifestyles in this ultimate fan hub. #RealHousewives
 
 # searchTerms
 
@@ -26,16 +26,18 @@ Can I Pull You For a Chat? All things #loveisland! Weekly discussion by @leigh-c
 > - Pinned posts: links such as `https://bsky.app/profile/saddymayo.bsky.social/post/3jxju2wwap22e` will pin at the top of the feed. One link per line, please.
 
 
-- "#loveisland"
-- "#loveislanduk"
-- "#loveislandusa"
-- "#casaamor"
-- "love island"
-- "love island uk"
-- "casa amor"
-- "bergie"
-- "love island usa"
-- "Love Island Games"
+- "#rhobh"
+- "#rhony"
+- "#rhoa"
+- "#rhoslc"
+- "#rhoc"
+- "#rhop"
+- "#rhonj"
+- "#realhousewives"
+- "#bravo"
+- "real housewives"
+- "real housewives of"
+- "Andy cohen"
 
 # safeMode
 
