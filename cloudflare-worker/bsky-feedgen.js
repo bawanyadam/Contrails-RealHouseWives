@@ -96,7 +96,7 @@ function fromUser(queryIdx, response, params) {
 }
 // Specify the exact keywords. Used Regex /i for case-insensitivity
 function verifySearchTermMatch(text) {
-  const regex = /(#loveislanduk|#loveisland|#loveislandusa|#casaamor|(?:love island uk)|(?:casa amor)|(?:love island)|(?:bergie)|(?:love island usa)|(?:love island games))/i;
+  const regex = /(#rhobh|#rhony|#rhoa|#rhoslc|#rhoc|#rhop|#rhonj|#realhousewives|#bravo|(?:real housewives)|(?:real housewives of)|(?:Andy cohen)|(?:bergie)|(?:love island usa)|(?:love island games))/i;
   return text.match(regex) !== null;
 }
 function fromSearch(queryIdx, response, searchParams) {
